@@ -35,14 +35,12 @@
 				</div>
 			</div>
 
-			<h:form>
 				<div class="row row-space">
 					<div class="col-md-12 col-margin-1p">
-						<h:commandLink class="btn btn-primary btn-lg rsvp-button text-vertical-center"
-							action="#{genericMB.goToRsvp()}" value="RSVP" />
+						<h:button class="btn btn-primary btn-lg rsvp-button text-vertical-center"
+							outcome="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}" value="RSVP" />
 					</div>
 				</div>
-			</h:form>
 		</div>
 	</ui:define>
 </ui:composition>
