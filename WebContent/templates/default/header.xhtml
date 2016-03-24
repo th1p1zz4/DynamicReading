@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition>
+	<div class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Dynamic Reading</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="#{view.viewId == '/index.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? '/DynaReading/faces/index.xhtml' : 'index.xhtml'}">Home</a></li>
+			<li class="#{view.viewId == '/views/tutoriais.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'tutoriais.xhtml' : 'views/tutoriais.xhtml'}">Tutoriais</a></li>
+			<li class="#{view.viewId == '/views/rsvp.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/tutoriais.xhtml'}">RSVP</a></li>
+			<li class="#{view.viewId == '/views/sobre.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'sobre.xhtml' : 'views/tutoriais.xhtml'}">Sobre</a></li>
+			<li class="#{view.viewId == '/views/contato.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'contato.xhtml' : 'views/tutoriais.xhtml'}">Contato</a></li>
+		</ul>
+	</div>
+
+	</div>
+</ui:composition>
+</html>

@@ -1,56 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
-<h:head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta http-equiv="X-UA-Conpatible" content="IE=edge" />
-	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
-	<h:outputStylesheet library="css" name="custom.css"></h:outputStylesheet>
-	<title>Dynamic Reading</title>
-</h:head> 
-<h:body> 
-	<!-- Header da aplicação -->
-	<!-- Menu de navegação -->
-	<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Dynamic Reading</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Tutoriais</a></li>
-			<li><a href="#">RSVP</a></li>
-			<li><a href="#">Sobre</a></li>
-			<li><a href="#">Contato</a></li>
-		</ul>
-	</div>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	</nav>
-	<div class="container center-block">
-		<div class="row">
-			<div class="col-xs-12">
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 1" />
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 2" />
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 3" />
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 4" />
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 5" />
-				<h:commandButton class="btn big-button" action="#{studentMB.updateStudent()}" value="Exercício 6" />
+<ui:composition template="/templates/default/main.xhtml">
+	<ui:define name="content">
+		<div class="container-fluid container-fluid-footer-space">
+
+			<div class="row row-space">
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 1" />
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 2" />
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 3" />
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 4" />
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 5" />
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<h:commandButton class="btn big-button"
+						action="#{studentMB.updateStudent()}" value="Exercício 6" />
+				</div>
 			</div>
+
+			<h:form>
+				<div class="row row-space">
+					<div class="col-md-12 col-margin-3p">
+						<h:commandLink class="btn btn-primary btn-lg rsvp-button text-vertical-center"
+							action="#{genericMB.goToRsvp()}" value="RSVP" />
+					</div>
+				</div>
+			</h:form>
 		</div>
-	</div>
-	
-	<div class="container">
-		<div class="row center-block">
-				<h:commandButton class="btn rsvp-button" action="#{studentMB.updateStudent()}" value="RSVP" />
-		</div>
-	</div>
-	<!-- Footer da aplicação -->
-		<div class="navbar navbar-default navbar-fixed-bottom bg-info">
-			<div class="navbar-brand">
-			</div>
-		</div>
-</h:body> 
+	</ui:define>
+</ui:composition>
+
 </html>
