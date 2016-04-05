@@ -1,7 +1,5 @@
 package br.com.dynamicreading.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -14,6 +12,9 @@ public class GenericMB {
 		
 	}
 	
+	public void doAction(){
+		
+	}
 	
 	//Métodos de navegação
 	public String goToRsvp (){

@@ -1,0 +1,16 @@
+.rsvp-main-label {
+	font-family: arial;
+	font-size: 300%;
+	padding: 15px 20%;
+	border: solid 1px;
+	border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.rsvp-margin-15 {
+    margin-top: 15%;
+}
+
+.rsvp-play-icon {
+	font-size: 300%;
+}

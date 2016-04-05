@@ -7,35 +7,33 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-	<f:facet name="first">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>DynaReading</title>
-	</f:facet>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>DynaReading</title>
 
-	<f:facet name="middle">
-		<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
-		<h:outputStylesheet name="css/custom.css" />
-		<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
-		<h:outputScript name="bootstrap/js/bootstrap.js" />
-	</f:facet>
-
-	<f:facet name="last">
-
-	</f:facet>
-
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+	<h:outputStylesheet name="css/custom.css" />
+	<h:outputStylesheet name="css/rsvp.css" />
+	<h:outputScript name="js/jquery-1.12.2.min.js" />
+	<h:outputScript name="js/rsvp.js" />
+	<h:outputScript name="bootstrap/js/bootstrap.js" />
 </h:head>
 
 <h:body>
+
+
 	<ui:insert name="header">
-    	<ui:include src="/templates/default/header.xhtml" />
-    </ui:insert>
-    
-       <ui:insert name="content" />
-       
-    <ui:insert name="footer">   
+		<ui:include src="/templates/default/header.xhtml" />
+	</ui:insert>
+
+	<ui:insert name="content" />
+
+	<ui:insert name="footer">
 		<ui:include src="footer.xhtml" />
 	</ui:insert>
 </h:body>
+
+
+
 </html>

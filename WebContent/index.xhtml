@@ -5,9 +5,35 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <ui:composition template="/templates/default/main.xhtml">
+
 	<ui:define name="content">
 		<div class="container-fluid container-fluid-footer-space">
+<h:form>
+<h:commandLink value="Show Modal" action="#{backingBean.doAction}"
+    onclick="$('#myModal').modal('show');" immediate="true">
+    <f:ajax execute="@this" render="@all"/>
+</h:commandLink>
 
+		
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <h:form id="myForm">
+                <div class="modal-header">
+                    <h4 class="modal-title">Test Modal</h4>
+                </div>
+                <div class="modal-body">
+                    Content area
+                </div>
+                <h:panelGroup layout="block" styleClass="modal-footer">
+                    <h:button value="Close" immediate="true" class="btn btn-default" oncomplete="$('#myModal').modal('hide');" />
+                </h:panelGroup>
+            </h:form>
+        </div>
+    </div>
+</div>
+
+</h:form>		
 			<div class="row row-space">
 				<div class="col-md-2 col-xs-4">
 					<h:commandButton class="btn big-button"

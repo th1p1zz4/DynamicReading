@@ -5,13 +5,35 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:body>
 
 	<ui:composition template="/templates/default/main.xhtml">
 		<ui:define name="content">
-		
+			
+			
+			<div class="row row-centered rsvp-margin-15">
+				<div class="col-md-12">
+					<h:outputLabel id="rsvpLabel" class="rsvp-main-label"></h:outputLabel>
+				</div>
+				<div class="col-md-12">
+				<h:form>
+					<h:commandLink>
+					<i class="glyphicon glyphicon-play-circle rsvp-play-icon"/>
+					</h:commandLink>
+					</h:form>
+				</div>
+			</div>
+			
+			<div class="row row-centered">
+				<div class="col-md-12">
+					<h:outputLabel>Escreva seu texto aqui:</h:outputLabel>
+				</div>
+				<div class="col-md-12">	
+					<h:inputTextarea cols="40" rows="5" onkeyup="setUserText(this.value);"/>
+				</div>
+			</div>
+			
+			
 		</ui:define>
 	</ui:composition>
 
-</h:body>
 </html>
