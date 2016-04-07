@@ -6,34 +6,73 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-	<ui:composition template="/templates/default/main.xhtml">
-		<ui:define name="content">
-			
-			
-			<div class="row row-centered rsvp-margin-15">
-				<div class="col-md-12">
-					<h:outputLabel id="rsvpLabel" class="rsvp-main-label"></h:outputLabel>
-				</div>
-				<div class="col-md-12">
-				<h:form>
-					<h:commandLink>
-					<i class="glyphicon glyphicon-play-circle rsvp-play-icon"/>
-					</h:commandLink>
-					</h:form>
-				</div>
+<ui:composition template="/templates/default/main.xhtml">
+	<ui:define name="content">
+
+
+		<div class="row row-centered rsvp-margin-15">
+			<div class="col-md-12">
+				<h:outputLabel id="rsvpLabel" class="rsvp-main-label"></h:outputLabel>
 			</div>
-			
-			<div class="row row-centered">
-				<div class="col-md-12">
-					<h:outputLabel>Escreva seu texto aqui:</h:outputLabel>
-				</div>
-				<div class="col-md-12">	
-					<h:inputTextarea cols="40" rows="5" onkeyup="setUserText(this.value);"/>
-				</div>
+
+			<div class="btn-group rsvp-padding-10" role="group" aria-label="...">
+				
+				<button type="button" class="btn btn-default" onclick="back();">
+					<i class="glyphicon glyphicon-step-backward rsvp-play-icon" />
+				</button>
+				
+				<button type="button" class="btn btn-success" onclick="play();">
+					<i class="glyphicon glyphicon-play-circle rsvp-play-icon" />
+				</button>
+				
+				<button type="button" class="btn btn-warning" onclick="clearTimer();">
+					<i class="glyphicon glyphicon-pause rsvp-play-icon" />
+				</button>
+				
+				<button class="btn btn-primary dropdown-toggle btn-height" type="button" data-toggle="dropdown">
+					Selecione a velocidade <span class="caret"></span>
+				</button>
+			<ul class="dropdown-menu dropdown-menu-right rsvp-dropdown">
+					<li class="rsvp-li-pad">
+						<button id="btn1" type="button" class="btn btn-info rsvp-btn-dropdown" onclick="setOption1(250)">
+							250 wpm
+						</button>
+					</li>	
+					<li class="rsvp-li-pad">
+						<button id="btn2" type="button" class="btn btn-primary rsvp-btn-dropdown" onclick="setOption2(400)">
+							400 wpm
+						</button>
+					</li>
+					<li class="rsvp-li-pad">
+						<button id="btn3" type="button" class="btn btn-success rsvp-btn-dropdown" onclick="setOption3(500)">
+							500 wpm
+						</button>
+					</li>
+					<li class="rsvp-li-pad">
+						<button id="btn4" type="button" class="btn btn-warning rsvp-btn-dropdown" onclick="setOption4(600)">
+							600 wpm
+						</button>
+					</li>
+					<li class="rsvp-li-pad">
+						<button id="btn5" type="button" class="btn btn-danger rsvp-btn-dropdown" onclick="setOption5(700)">
+							700 wpm
+						</button>
+					</li>
+			</ul>
+		</div>
+	</div>	
+		<div class="row row-centered">
+			<div class="col-md-12">
+				<h:outputLabel>Escreva seu texto aqui:</h:outputLabel>
 			</div>
-			
-			
-		</ui:define>
-	</ui:composition>
+			<div class="col-md-12">
+				<h:inputTextarea cols="40" rows="5"
+					onkeyup="setUserText(this.value);" />
+			</div>
+		</div>
+
+
+	</ui:define>
+</ui:composition>
 
 </html>

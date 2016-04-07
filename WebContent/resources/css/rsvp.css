@@ -1,16 +1,40 @@
 .rsvp-main-label {
 	font-family: arial;
 	font-size: 300%;
-	padding: 15px 20%;
+	padding: 15px 2%;
 	border: solid 1px;
 	border-radius: 5px;
     word-wrap: break-word;
+    min-width: 600px;
+    min-height: 92px;
 }
 
 .rsvp-margin-15 {
     margin-top: 15%;
 }
 
+.btn-height {
+	height: 61px;
+}
+
+.rsvp-padding-10 {
+	padding: 10px;	
+}
+
 .rsvp-play-icon {
 	font-size: 300%;
 }
+
+.rsvp-btn-dropdown{
+	width: 100%;
+}
+
+.rsvp-li-pad {
+	padding: 1px;	
+}
+
+.rsvp-dropdown {
+	top: 90%;
+	width: 100%;
+}
+
