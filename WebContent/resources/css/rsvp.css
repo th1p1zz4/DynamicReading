@@ -5,8 +5,13 @@
 	border: solid 1px;
 	border-radius: 5px;
     word-wrap: break-word;
-    min-width: 600px;
+    min-width: 80%;
     min-height: 92px;
+    background-color: white;
+}
+
+.rsvp-label-text {
+	color: white;
 }
 
 .rsvp-margin-15 {
@@ -29,6 +34,16 @@
 	width: 100%;
 }
 
+.rsvp-btn-radius {
+	border-radius: 10px;
+}
+
+.btn-pause{
+	color: #fff;
+    background-color: #B22222;
+    border-color: #751717;
+}
+
 .rsvp-li-pad {
 	padding: 1px;	
 }
@@ -38,3 +53,7 @@
 	width: 100%;
 }
 
+.tooltip > .tooltip-inner {
+      padding: 10px;
+      font-size: 15px;
+}

@@ -1,8 +1,10 @@
 /* Removendo scroll horizontal */
 html, body {
-    max-width: 100%;
+    max-width: 105%;
     overflow-x: hidden;
-    height: 95%;
+    height: 105%;
+/*     background: url("../images/background2.jpg") no-repeat; */
+/*     background-size: cover; */
 }
 
 /* Início da customização */
@@ -65,4 +67,9 @@ html, body {
 .text-vertical-center {
 	text-align: center;
 	line-height: 80px;
+}
+
+
+.main-icon-accordion {
+	margin-left: 50%;
 }

@@ -17,45 +17,45 @@
 
 			<div class="btn-group rsvp-padding-10" role="group" aria-label="...">
 				
-				<button type="button" class="btn btn-default" onclick="back();">
+				<button id="btn1" type="button" class="btn btn-default rsvp-btn-radius" onclick="back();">
 					<i class="glyphicon glyphicon-step-backward rsvp-play-icon" />
 				</button>
 				
-				<button type="button" class="btn btn-success" onclick="play();">
+				<button id="btn2" type="button" class="btn btn-success" onclick="play();">
 					<i class="glyphicon glyphicon-play-circle rsvp-play-icon" />
 				</button>
 				
-				<button type="button" class="btn btn-warning" onclick="clearTimer();">
-					<i class="glyphicon glyphicon-pause rsvp-play-icon" />
+				<button id="btn3" type="button" class="btn btn-pause" onclick="clearTimer();">
+					<i class="glyphicon glyphicon-ban-circle rsvp-play-icon" />
 				</button>
 				
-				<button class="btn btn-primary dropdown-toggle btn-height" type="button" data-toggle="dropdown">
+				<button id="selectedppm" class="btn btn-primary dropdown-toggle btn-height" type="button" data-toggle="dropdown">
 					Selecione a velocidade <span class="caret"></span>
 				</button>
 			<ul class="dropdown-menu dropdown-menu-right rsvp-dropdown">
 					<li class="rsvp-li-pad">
 						<button id="btn1" type="button" class="btn btn-info rsvp-btn-dropdown" onclick="setOption1(250)">
-							250 wpm
+							250 ppm
 						</button>
 					</li>	
 					<li class="rsvp-li-pad">
 						<button id="btn2" type="button" class="btn btn-primary rsvp-btn-dropdown" onclick="setOption2(400)">
-							400 wpm
+							400 ppm
 						</button>
 					</li>
 					<li class="rsvp-li-pad">
 						<button id="btn3" type="button" class="btn btn-success rsvp-btn-dropdown" onclick="setOption3(500)">
-							500 wpm
+							500 ppm
 						</button>
 					</li>
 					<li class="rsvp-li-pad">
 						<button id="btn4" type="button" class="btn btn-warning rsvp-btn-dropdown" onclick="setOption4(600)">
-							600 wpm
+							600 ppm
 						</button>
 					</li>
 					<li class="rsvp-li-pad">
 						<button id="btn5" type="button" class="btn btn-danger rsvp-btn-dropdown" onclick="setOption5(700)">
-							700 wpm
+							700 ppm
 						</button>
 					</li>
 			</ul>
@@ -63,7 +63,7 @@
 	</div>	
 		<div class="row row-centered">
 			<div class="col-md-12">
-				<h:outputLabel>Escreva seu texto aqui:</h:outputLabel>
+				<h:outputLabel class="rsvp-label-text">Escreva seu texto aqui:</h:outputLabel>
 			</div>
 			<div class="col-md-12">
 				<h:inputTextarea cols="40" rows="5"

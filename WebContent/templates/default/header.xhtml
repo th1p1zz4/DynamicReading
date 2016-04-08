@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <ui:composition>
-	<div class="navbar navbar-default">
+	<div class="navbar navbar-default" data-toggle="collapse" data-target="#accordion">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#">Dynamic Reading</a>
 		</div>
-		<ul class="nav navbar-nav">
+		<ul id="accordion" class="nav navbar-nav collapse in">
 			<li class="#{view.viewId == '/index.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? '/DynaReading/faces/index.xhtml' : 'index.xhtml'}">Home</a></li>
 			<li class="#{view.viewId == '/views/tutoriais.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'tutoriais.xhtml' : 'views/tutoriais.xhtml'}">Tutoriais</a></li>
 			<li class="#{view.viewId == '/views/rsvp.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}">RSVP</a></li>
@@ -17,7 +17,7 @@
 			<li class="#{view.viewId == '/views/contato.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'contato.xhtml' : 'views/contato.xhtml'}">Contato</a></li>
 		</ul>
 	</div>
-
+		<i class="glyphicon glyphicon-chevron-down main-icon-accordion" />
 	</div>
 </ui:composition>
 </html>
