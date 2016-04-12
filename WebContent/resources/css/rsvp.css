@@ -11,7 +11,7 @@
 }
 
 .rsvp-label-text {
-	color: white;
+	color: black;
 }
 
 .rsvp-margin-15 {
@@ -35,13 +35,49 @@
 }
 
 .rsvp-btn-radius {
-	border-radius: 10px;
+	border-radius: 10px !important;
 }
 
 .btn-pause{
 	color: #fff;
     background-color: #B22222;
     border-color: #751717;
+}
+
+.btn-pause:focus,
+.btn-pause.focus {
+  color: #fff;
+  background-color: #B22222;
+  border-color: #751717;
+}
+.btn-pause:hover {
+  color: #fff;
+  background-color: #861515;
+  border-color: #751717;
+}
+.btn-pause:active,
+.btn-pause.active,
+.open > .dropdown-toggle.btn-pause {
+  color: #fff;
+  background-color: #B22222;
+  border-color: #751717;
+}
+.btn-pause:active:hover,
+.btn-pause.active:hover,
+.open > .dropdown-toggle.btn-pause:hover,
+.btn-pause:active:focus,
+.btn-pause.active:focus,
+.open > .dropdown-toggle.btn-pause:focus,
+.btn-pause:active.focus,
+.btn-pause.active.focus,
+.open > .dropdown-toggle.btn-pause.focus {
+  color: #fff;
+  background-color: #B22344;
+  border-color: #751717;
+}
+
+.rsvp-text-area {
+	border-left-style: outset;
 }
 
 .rsvp-li-pad {
@@ -51,9 +87,32 @@
 .rsvp-dropdown {
 	top: 90%;
 	width: 100%;
+	background-color: transparent !important;
+    border: none;
 }
 
 .tooltip > .tooltip-inner {
       padding: 10px;
       font-size: 15px;
 }
+
+.glyphicon-refresh-animate {
+   -webkit-animation: spin2 .7s infinite linear;
+    position: absolute;
+    left: 45%;
+    top: 14%;
+    font-size: 60px;
+    background-color: #fff;
+    color: #5bc0de;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+

@@ -9,27 +9,28 @@
 <ui:composition template="/templates/default/main.xhtml">
 	<ui:define name="content">
 
-
 		<div class="row row-centered rsvp-margin-15">
 			<div class="col-md-12">
-				<h:outputLabel id="rsvpLabel" class="rsvp-main-label"></h:outputLabel>
+				<span id="loading" class="glyphicon glyphicon-refresh glyphicon-refresh-animate rsvp-loading"></span>
+				<h:outputLabel id="rsvpLabel" class="rsvp-main-label">
+				</h:outputLabel>
 			</div>
-
-			<div class="btn-group rsvp-padding-10" role="group" aria-label="...">
+			
+			<div class="btn-group rsvp-padding-10 btn-group-rsvp" role="group" aria-label="...">
 				
 				<button id="btn1" type="button" class="btn btn-default rsvp-btn-radius" onclick="back();">
 					<i class="glyphicon glyphicon-step-backward rsvp-play-icon" />
 				</button>
 				
-				<button id="btn2" type="button" class="btn btn-success" onclick="play();">
+				<button id="btn2" type="button" class="btn btn-success rsvp-btn-radius" onclick="play();">
 					<i class="glyphicon glyphicon-play-circle rsvp-play-icon" />
 				</button>
 				
-				<button id="btn3" type="button" class="btn btn-pause" onclick="clearTimer();">
+				<button id="btn3" type="button" class="btn btn-pause rsvp-btn-radius" onclick="clearTimer();">
 					<i class="glyphicon glyphicon-ban-circle rsvp-play-icon" />
 				</button>
 				
-				<button id="selectedppm" class="btn btn-primary dropdown-toggle btn-height" type="button" data-toggle="dropdown">
+				<button id="selectedppm" class="btn btn-primary dropdown-toggle btn-height rsvp-btn-radius" type="button" data-toggle="dropdown">
 					Selecione a velocidade <span class="caret"></span>
 				</button>
 			<ul class="dropdown-menu dropdown-menu-right rsvp-dropdown">
@@ -66,7 +67,7 @@
 				<h:outputLabel class="rsvp-label-text">Escreva seu texto aqui:</h:outputLabel>
 			</div>
 			<div class="col-md-12">
-				<h:inputTextarea cols="40" rows="5"
+				<h:inputTextarea class="rsvp-text-area" cols="40" rows="5"
 					onkeyup="setUserText(this.value);" />
 			</div>
 		</div>

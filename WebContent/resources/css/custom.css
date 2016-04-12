@@ -2,10 +2,16 @@
 html, body {
     max-width: 105%;
     overflow-x: hidden;
-    height: 105%;
-/*     background: url("../images/background2.jpg") no-repeat; */
-/*     background-size: cover; */
+    /*background: url("../images/background3.jpg") no-repeat;*/
+    background-size: cover;
 }
+
+.brand-icon {
+	position: relative;
+    top: -15px;
+    height: 50.156px;
+}
+
 
 /* Início da customização */
 
@@ -72,4 +78,34 @@ html, body {
 
 .main-icon-accordion {
 	margin-left: 50%;
+}
+
+/* ====== Ajuste qnd for device para os botões do RSVP ====== */
+
+@media screen and (max-width: 390px) {
+    .btn-height {
+    	margin-left: 5% !important;
+    }
+    
+    .btn-group-rsvp {
+    	padding: 10px 70px !important;
+    }
+    
+    .rsvp-main-label {
+    	font-size: 140% !important;
+    	padding: 25px 2% !important;
+    }
+}
+
+.navbar-inverse .navbar-brand {
+	color: #000;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #000;
+}
+
+.nav-bar-custom {
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));*/
+	background: linear-gradient(to right, rgba(255,0,0,0), rgb(190, 193, 0));
 }

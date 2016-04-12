@@ -7,33 +7,7 @@
 <ui:composition template="/templates/default/main.xhtml">
 
 	<ui:define name="content">
-		<div class="container-fluid container-fluid-footer-space">
-<h:form>
-<h:commandLink value="Show Modal" action="#{backingBean.doAction}"
-    onclick="$('#myModal').modal('show');" immediate="true">
-    <f:ajax execute="@this" render="@all"/>
-</h:commandLink>
-
-		
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <h:form id="myForm">
-                <div class="modal-header">
-                    <h4 class="modal-title">Test Modal</h4>
-                </div>
-                <div class="modal-body">
-                    Content area
-                </div>
-                <h:panelGroup layout="block" styleClass="modal-footer">
-                    <h:button value="Close" immediate="true" class="btn btn-default" oncomplete="$('#myModal').modal('hide');" />
-                </h:panelGroup>
-            </h:form>
-        </div>
-    </div>
-</div>
-
-</h:form>		
+		<div class="container-fluid">
 			<div class="row row-space">
 				<div class="col-md-2 col-xs-4">
 					<h:commandButton class="btn big-button"
@@ -68,6 +42,26 @@
 					</div>
 				</div>
 		</div>
+		
+		<hr class="featurette-divider"></hr>
+		
+	<div class="container">
+		
+		<div class="featurette">
+			<h:graphicImage class="featurette-image pull-right" library="images" name="icone-bolt.png" />
+        	<h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+        	<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		
+		<hr class="featurette-divider"></hr>
+
+      <div class="featurette">
+        <h:graphicImage class="featurette-image pull-left" library="images" name="icone-bolt.png" />
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      	
+	</div>	
 	</ui:define>
 </ui:composition>
 

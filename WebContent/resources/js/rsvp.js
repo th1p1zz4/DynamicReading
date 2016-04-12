@@ -5,6 +5,7 @@ var interval;
 var wpm;
 var index = 0;
 var listBtnClass = ["btn-info", "btn-primary", "btn-success", "btn-warning", "btn-danger"];
+var handlePlay = false;
 
 function back(){
 	if(listUserText != null && listUserText != undefined){
@@ -15,8 +16,10 @@ function back(){
 }
 
 function play(){
+	$('#loading').hide();
 	//Valida se a lista não está vazia
-	if(listUserText != null && listUserText != undefined){
+	if(listUserText != null && listUserText != undefined && !handlePlay){
+		handlePlay = true;
 		//recebe as palavras por minuto que o usuário selecionou
 		var wordPer = getWordsPerMinute() ? getWordsPerMinute() : 250;
 		//cálcula o tempo de palavras por minuto e transforma para segundos para passar as palavras por segundo.
@@ -24,6 +27,7 @@ function play(){
 		//Seta do ínico o índice da lista para pegar a partir da primeira palavras
 		index = 0;
 		//função que seta as palavras para passar na tela para o usuário
+		
 		interval = setInterval(function(){
 //			//Se a palavra possui um ponto final, aumenta o delay para ter uma pausa.
 //			if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
@@ -36,6 +40,7 @@ function play(){
 				index++;
 				if(listUserText.length == index){
 					clearTimer();
+					handlePlay = false;
 				}
 			
 		},time);
@@ -46,6 +51,7 @@ function play(){
 function clearTimer(){
 	if(interval != null && interval != undefined){
 		clearInterval(interval);
+		handlePlay = false;
 	}
 }
 
@@ -63,6 +69,12 @@ function setUserText(textArea){
 	receiveText();
 }
 
+function loading(){
+	$('#loading').show();
+	back();
+	setTimeout(play, 2000);
+}
+
 function setOption1(value){
 	var activeClass = $('#selectedppm').attr('class');
 	for(var i = 0; i <= listBtnClass.length; i++){
@@ -74,7 +86,9 @@ function setOption1(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-info');
 	$("#selectedppm").text("250 palavras por minuto");
 	wpm = value;
+	loading();
 }
+
 
 function setOption2(value){
 	var activeClass = $('#selectedppm').attr('class');
@@ -87,6 +101,7 @@ function setOption2(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-primary');
 	$("#selectedppm").text("400 palavras por minuto");
 	wpm = value;
+	loading();
 }
 
 function setOption3(value){
@@ -100,6 +115,7 @@ function setOption3(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-success');
 	$("#selectedppm").text("500 palavras por minuto");
 	wpm = value;
+	loading();
 }
 
 function setOption4(value){
@@ -113,6 +129,7 @@ function setOption4(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-warning');
 	$("#selectedppm").text("600 palavras por minuto");
 	wpm = value;
+	loading();
 }
 
 function setOption5(value){
@@ -126,6 +143,7 @@ function setOption5(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-danger');
 	$("#selectedppm").text("700 palavras por minuto");
 	wpm = value;
+	loading();
 }
 
 function getWordsPerMinute(){
@@ -135,9 +153,10 @@ function getWordsPerMinute(){
 //Quando carregr a tela, irá inserir os tooltips dos botões
 
 window.onload = function(){
-	$('#btn1').tooltip({title: "Volta para a primeira palavras", trigger: "hover", placement: "bottom"});
-	$('#btn2').tooltip({title: "Inicia a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
-	$('#btn3').tooltip({title: "Para a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
-	$('#selectedppm').tooltip({title: "Selecione a quantidade de palavras por minuto que deverão passar", trigger: "hover", placement: "bottom"}); 
+	$('#loading').hide();
+//	$('#btn1').tooltip({title: "Volta para a primeira palavra", trigger: "hover", placement: "bottom"});
+//	$('#btn2').tooltip({title: "Inicia a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
+//	$('#btn3').tooltip({title: "Para a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
+	$('#selectedppm').tooltip({title: "Selecione a quantidade de palavras que passarão por minuto", trigger: "hover", placement: "bottom"}); 
 }
 

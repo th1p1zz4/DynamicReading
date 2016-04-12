@@ -2,22 +2,34 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
 <ui:composition>
-	<div class="navbar navbar-default" data-toggle="collapse" data-target="#accordion">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Dynamic Reading</a>
+	<div class="navbar-wrapper">
+	<div class="container">
+	<div class="navbar navbar-inverse ">
+		<div class="navbar-inner">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#accordion">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			</button>
+			<a class="navbar-brand" href="#">
+ 				<h:graphicImage class="brand-icon" library="images" name="icone-bolt.png" />
+			</a>
 		</div>
-		<ul id="accordion" class="nav navbar-nav collapse in">
-			<li class="#{view.viewId == '/index.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? '/DynaReading/faces/index.xhtml' : 'index.xhtml'}">Home</a></li>
-			<li class="#{view.viewId == '/views/tutoriais.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'tutoriais.xhtml' : 'views/tutoriais.xhtml'}">Tutoriais</a></li>
-			<li class="#{view.viewId == '/views/rsvp.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}">RSVP</a></li>
-			<li class="#{view.viewId == '/views/sobre.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'sobre.xhtml' : 'views/sobre.xhtml'}">Sobre</a></li>
-			<li class="#{view.viewId == '/views/contato.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'contato.xhtml' : 'views/contato.xhtml'}">Contato</a></li>
-		</ul>
+		<div class="collapse navbar-collapse" id="accordion">
+			<ul class="nav navbar-nav">
+				<li class="#{view.viewId == '/index.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? '/DynaReading/faces/index.xhtml' : 'index.xhtml'}">Home</a></li>
+				<li class="#{view.viewId == '/views/tutoriais.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'tutoriais.xhtml' : 'views/tutoriais.xhtml'}">Tutoriais</a></li>
+				<li class="#{view.viewId == '/views/rsvp.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}">RSVP</a></li>
+				<li class="#{view.viewId == '/views/sobre.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'sobre.xhtml' : 'views/sobre.xhtml'}">Sobre</a></li>
+				<li class="#{view.viewId == '/views/contato.xhtml' ? 'active' : ''}"><a href="#{headerMB.urlView() ? 'contato.xhtml' : 'views/contato.xhtml'}">Contato</a></li>
+			</ul>
+		</div>
 	</div>
-		<i class="glyphicon glyphicon-chevron-down main-icon-accordion" />
+	</div>
 	</div>
 </ui:composition>
 </html>
