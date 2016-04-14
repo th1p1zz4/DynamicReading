@@ -7,48 +7,58 @@
 <ui:composition template="/templates/default/main.xhtml">
 
 	<ui:define name="content">
-		<div class="container-fluid">
-			<div class="row row-space">
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 1" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 2" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 3" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 4" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 5" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 6" />
-				</div>
-			</div>
+<!-- 				<div class="row row-space"> -->
+<!-- 					<div class="col-md-12 col-margin-1p"> -->
+<!-- 						<h:button class="btn btn-primary btn-lg rsvp-button text-vertical-center" -->
+<!-- 							outcome="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}" value="RSVP" /> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 
-				<div class="row row-space">
-					<div class="col-md-12 col-margin-1p">
-						<h:button class="btn btn-primary btn-lg rsvp-button text-vertical-center"
-							outcome="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}" value="RSVP" />
-					</div>
-				</div>
-		</div>
+<div class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>DY Reading</h3>
+              <p class="lead">Desenvolvido para auxiliar na leitura de textos baseado na técnica de leitura dinâmica. Aprenda a ler textos com maior agilidade e compreensão. </p>
+              <p class="lead">Sinta prazer pela leitura!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.carousel -->
 		
-		<hr class="featurette-divider"></hr>
+	<div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <i class="glyphicon glyphicon-fire marketing-icon"></i>
+          <h2>RSVP</h2>
+          <p>Rapid Serial Visual Presentation é a técnica que aumentará a velocidade da leitura e exigirá bastante concentração e foco.</p>
+          <p><a class="btn" href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}">Veja aqui »</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <i class="glyphicon glyphicon-eye-open marketing-icon"></i>
+          <h2>Campo de visão</h2>
+          <p>Focar em um ponto e observar as coisas ao redor sem qualquer movimento do olho e conseguir identificá-las, não é uma tarefa tão simples. </p>
+          <p><a class="btn" href="#">Veja aqui »</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <i class="glyphicon glyphicon-flash marketing-icon"></i>
+          <h2>Identificação visual</h2>
+          <p>Procurar uma palavra no meio de muitas é um desafio e tanto. Estes exercícios serão desafiadores e ao mesmo tempo um ótimo treino.</p>
+          <p><a class="btn" href="#">Veja aqui »</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider"/>
+
 		
 	<div class="container">
 		
 		<div class="featurette">
-			<h:graphicImage class="featurette-image pull-right" library="images" name="icone-bolt.png" />
+			<h:graphicImage class="featurette-image pull-right" library="images" name="head.png" />
         	<h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
         	<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 		</div>
@@ -56,11 +66,13 @@
 		<hr class="featurette-divider"></hr>
 
       <div class="featurette">
-        <h:graphicImage class="featurette-image pull-left" library="images" name="icone-bolt.png" />
+        <h:graphicImage class="featurette-image pull-left" library="images" name="skull-head.png" />
         <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       	
+	</div>
+	
 	</div>	
 	</ui:define>
 </ui:composition>

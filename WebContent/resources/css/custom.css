@@ -107,5 +107,10 @@ html, body {
 
 .nav-bar-custom {
 	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));*/
-	background: linear-gradient(to right, rgba(255,0,0,0), rgb(190, 193, 0));
+	background: linear-gradient(to right, #4BB4F1, #0F459B);
+	border-radius: 5px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
 }
