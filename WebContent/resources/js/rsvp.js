@@ -5,58 +5,89 @@ var interval;
 var wpm;
 var index = 0;
 var listBtnClass = ["btn-info", "btn-primary", "btn-success", "btn-warning", "btn-danger"];
-var handlePlay = false;
+var isPause = false;
 
 function back(){
 	if(listUserText != null && listUserText != undefined){
 	index = 0;
 	$("#rsvpLabel").text(listUserText[index]);
+	$('#change').removeClass('glyphicon-pause').addClass('glyphicon-play-circle');
 	clearTimer();
 	}
 }
 
 function play(){
-	$('#loading').hide();
-	//Valida se a lista não está vazia
-	if(listUserText != null && listUserText != undefined && !handlePlay){
-		handlePlay = true;
-		//recebe as palavras por minuto que o usuário selecionou
-		var wordPer = getWordsPerMinute() ? getWordsPerMinute() : 250;
-		//cálcula o tempo de palavras por minuto e transforma para segundos para passar as palavras por segundo.
-		var time = 1000 * (1 / (wordPer / 60));
-		//Seta do ínico o índice da lista para pegar a partir da primeira palavras
-		index = 0;
-		//função que seta as palavras para passar na tela para o usuário
-		
-		interval = setInterval(function(){
-//			//Se a palavra possui um ponto final, aumenta o delay para ter uma pausa.
-//			if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
-//				time = 6000;
-//				//Se a palavra possui uma vírgula, aumenta o delay para ter uma pausa.
-//			} else if (listUserText[index].slice(-1) == "," && listUserText[index].slice(-1) != undefined){
-//				time = 5000;
-//			}
-				$("#rsvpLabel").text(listUserText[index]);
-				index++;
-				if(listUserText.length == index){
-					clearTimer();
-					handlePlay = false;
-				}
-			
-		},time);
+	if(!isPause){
+		//Valida se a lista não está vazia
+		if(listUserText != null && listUserText != undefined){
+			$('#loading').hide();
+			$('#change').removeClass('glyphicon-play-circle').addClass('glyphicon-pause');
+			//recebe as palavras por minuto que o usuário selecionou
+			var wordPer = getWordsPerMinute() ? getWordsPerMinute() : 250;
+			//cálcula o tempo de palavras por minuto e transforma para segundos para passar as palavras por segundo.
+			var time = 1000 * (1 / (wordPer / 60));
+			//Seta do ínico o índice da lista para pegar a partir da primeira palavras
+			index = index ? index : 0;
+			defineInterval(time);
+			isPause = true;
+		}
+	} else {
+		pause();
 	}
 	
+}
+
+function pause(){
+	if(interval != null && interval != undefined){
+		clearInterval(interval);
+		$('#change').removeClass('glyphicon-pause').addClass('glyphicon-play-circle');
+		isPause = false;
+	}
 }
 
 function clearTimer(){
 	if(interval != null && interval != undefined){
 		clearInterval(interval);
-		handlePlay = false;
 	}
 }
 
+function defineInterval(time){ 
+	interval = setInterval(function(){
+	//Se a palavra possui um ponto final, aumenta o delay para ter uma pausa.
+	if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
+		clearTimer();
+		isPause = false;
+		setTimeout(play, 600);
+		//Se a palavra possui uma vírgula, aumenta o delay para ter uma pausa.
+	} else if (listUserText[index].slice(-1) == "," && listUserText[index].slice(-1) != undefined){
+		clearTimer();
+		isPause = false;
+		setTimeout(play, 400);
+	} else if(listUserText[index].slice(-1) == "!" && listUserText[index].slice(-1) != undefined){
+		clearTimer();
+		isPause = false;
+		setTimeout(play, 400);
+	} else if(listUserText[index].slice(-1) == "?" && listUserText[index].slice(-1) != undefined){
+		clearTimer();
+		isPause = false;
+		setTimeout(play, 400);	
+	} else if(listUserText[index].slice(-1) == ")" && listUserText[index].slice(-1) != undefined){
+		clearTimer();
+		isPause = false;
+		setTimeout(play, 400);	
+	}
+		$("#rsvpLabel").text(listUserText[index]);
+		index++;
+		if(listUserText.length == index){
+			clearTimer();
+		}
+	
+},time);
+}
+
 function receiveText(){
-	listUserText = getUserText().split(" ");
+	listUserText = getUserText().replace( /\n/g, " ");
+	listUserText = getUserText().replace( "  ", " ").split(" ");
 	$("#rsvpLabel").text(listUserText[0]);
 }
 	
@@ -69,9 +100,10 @@ function setUserText(textArea){
 	receiveText();
 }
 
-function loading(){
+function loading(time){
 	$('#loading').show();
 	back();
+	isPause = false;
 	setTimeout(play, 2000);
 }
 
@@ -86,7 +118,7 @@ function setOption1(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-info');
 	$("#selectedppm").text("250 palavras por minuto");
 	wpm = value;
-	loading();
+	loading(wpm);
 }
 
 
@@ -101,7 +133,7 @@ function setOption2(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-primary');
 	$("#selectedppm").text("400 palavras por minuto");
 	wpm = value;
-	loading();
+	loading(wpm);
 }
 
 function setOption3(value){
@@ -115,7 +147,7 @@ function setOption3(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-success');
 	$("#selectedppm").text("500 palavras por minuto");
 	wpm = value;
-	loading();
+	loading(wpm);
 }
 
 function setOption4(value){
@@ -129,7 +161,7 @@ function setOption4(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-warning');
 	$("#selectedppm").text("600 palavras por minuto");
 	wpm = value;
-	loading();
+	loading(wpm);
 }
 
 function setOption5(value){
@@ -143,7 +175,7 @@ function setOption5(value){
 	$("#selectedppm").removeClass(activeClass).addClass('btn-danger');
 	$("#selectedppm").text("700 palavras por minuto");
 	wpm = value;
-	loading();
+	loading(wpm);
 }
 
 function getWordsPerMinute(){

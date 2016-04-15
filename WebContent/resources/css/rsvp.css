@@ -38,44 +38,6 @@
 	border-radius: 10px !important;
 }
 
-.btn-pause{
-	color: #fff;
-    background-color: #B22222;
-    border-color: #751717;
-}
-
-.btn-pause:focus,
-.btn-pause.focus {
-  color: #fff;
-  background-color: #B22222;
-  border-color: #751717;
-}
-.btn-pause:hover {
-  color: #fff;
-  background-color: #861515;
-  border-color: #751717;
-}
-.btn-pause:active,
-.btn-pause.active,
-.open > .dropdown-toggle.btn-pause {
-  color: #fff;
-  background-color: #B22222;
-  border-color: #751717;
-}
-.btn-pause:active:hover,
-.btn-pause.active:hover,
-.open > .dropdown-toggle.btn-pause:hover,
-.btn-pause:active:focus,
-.btn-pause.active:focus,
-.open > .dropdown-toggle.btn-pause:focus,
-.btn-pause:active.focus,
-.btn-pause.active.focus,
-.open > .dropdown-toggle.btn-pause.focus {
-  color: #fff;
-  background-color: #B22344;
-  border-color: #751717;
-}
-
 .rsvp-text-area {
 	border-left-style: outset;
 }
@@ -114,5 +76,11 @@
 @keyframes spin {
     from { transform: scale(1) rotate(0deg);}
     to { transform: scale(1) rotate(360deg);}
+}
+
+@media ( max-width : 400px) {
+	.rsvp-margin-15 {
+    	margin-top: 25%;
+	}
 }
 
