@@ -19,8 +19,8 @@ function back(){
 function play(){
 	if(!isPause){
 		//Valida se a lista não está vazia
-		if(listUserText != null && listUserText != undefined){
-			$('#loading').hide();
+		if(listUserText != null && listUserText != undefined && index < listUserText.length){
+			$('#myModal').modal('hide');
 			$('#change').removeClass('glyphicon-play-circle').addClass('glyphicon-pause');
 			//recebe as palavras por minuto que o usuário selecionou
 			var wordPer = getWordsPerMinute() ? getWordsPerMinute() : 250;
@@ -51,38 +51,42 @@ function clearTimer(){
 	}
 }
 
-function defineInterval(time){ 
+function defineInterval(time){
+	if(index < listUserText.length ){	
 	interval = setInterval(function(){
 	//Se a palavra possui um ponto final, aumenta o delay para ter uma pausa.
-	if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
-		clearTimer();
-		isPause = false;
-		setTimeout(play, 600);
-		//Se a palavra possui uma vírgula, aumenta o delay para ter uma pausa.
-	} else if (listUserText[index].slice(-1) == "," && listUserText[index].slice(-1) != undefined){
-		clearTimer();
-		isPause = false;
-		setTimeout(play, 400);
-	} else if(listUserText[index].slice(-1) == "!" && listUserText[index].slice(-1) != undefined){
-		clearTimer();
-		isPause = false;
-		setTimeout(play, 400);
-	} else if(listUserText[index].slice(-1) == "?" && listUserText[index].slice(-1) != undefined){
-		clearTimer();
-		isPause = false;
-		setTimeout(play, 400);	
-	} else if(listUserText[index].slice(-1) == ")" && listUserText[index].slice(-1) != undefined){
-		clearTimer();
-		isPause = false;
-		setTimeout(play, 400);	
-	}
+	
+		if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
+			clearTimer();
+			isPause = false;
+			setTimeout(play, 600);
+			//Se a palavra possui uma vírgula, aumenta o delay para ter uma pausa.
+		} else if (listUserText[index].slice(-1) == "," && listUserText[index].slice(-1) != undefined){
+			clearTimer();
+			isPause = false;
+			setTimeout(play, 400);
+		} else if(listUserText[index].slice(-1) == "!" && listUserText[index].slice(-1) != undefined){
+			clearTimer();
+			isPause = false;
+			setTimeout(play, 400);
+		} else if(listUserText[index].slice(-1) == "?" && listUserText[index].slice(-1) != undefined){
+			clearTimer();
+			isPause = false;
+			setTimeout(play, 400);	
+		} else if(listUserText[index].slice(-1) == ")" && listUserText[index].slice(-1) != undefined){
+			clearTimer();
+			isPause = false;
+			setTimeout(play, 400);	
+		}
 		$("#rsvpLabel").text(listUserText[index]);
 		index++;
 		if(listUserText.length == index){
 			clearTimer();
+			$('#change').removeClass('glyphicon-pause').addClass('glyphicon-play-circle');
 		}
 	
 },time);
+	}
 }
 
 function receiveText(){
@@ -101,10 +105,12 @@ function setUserText(textArea){
 }
 
 function loading(time){
-	$('#loading').show();
+	if(listUserText != null && listUserText != undefined){
+	$("#myModal").modal();
 	back();
 	isPause = false;
 	setTimeout(play, 2000);
+	}
 }
 
 function setOption1(value){
@@ -185,7 +191,6 @@ function getWordsPerMinute(){
 //Quando carregr a tela, irá inserir os tooltips dos botões
 
 window.onload = function(){
-	$('#loading').hide();
 //	$('#btn1').tooltip({title: "Volta para a primeira palavra", trigger: "hover", placement: "bottom"});
 //	$('#btn2').tooltip({title: "Inicia a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
 //	$('#btn3').tooltip({title: "Para a leitura dinâmica", trigger: "hover", placement: "bottom"}); 

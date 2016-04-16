@@ -78,7 +78,7 @@
     to { transform: scale(1) rotate(360deg);}
 }
 
-@media ( max-width : 400px) {
+@media ( max-width : 500px) {
 	.rsvp-margin-15 {
     	margin-top: 25%;
 	}
