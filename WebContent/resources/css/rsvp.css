@@ -42,6 +42,11 @@
 	border-left-style: outset;
 }
 
+.rsvp-btn-explain{
+	margin: auto;
+	display: block;
+}
+
 .rsvp-li-pad {
 	padding: 1px;	
 }
@@ -68,19 +73,12 @@
     color: #5bc0de;
 }
 
-@-webkit-keyframes spin2 {
-    from { -webkit-transform: rotate(0deg);}
-    to { -webkit-transform: rotate(360deg);}
-}
-
-@keyframes spin {
-    from { transform: scale(1) rotate(0deg);}
-    to { transform: scale(1) rotate(360deg);}
-}
-
 @media ( max-width : 500px) {
 	.rsvp-margin-15 {
     	margin-top: 25%;
 	}
 }
 
+.rsvp-modal-color {
+	color: #0F459B;
+}

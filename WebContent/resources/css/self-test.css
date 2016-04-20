@@ -1,0 +1,14 @@
+.sf-margin-10 {
+	margin-top: 10%;
+}
+
+.sf-btn-center {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+}
+
+.sf-center-text {
+	padding: 2% 10% 0% 12%;
+}

@@ -8,8 +8,11 @@
 
 <ui:composition template="/templates/default/main.xhtml">
 	<ui:define name="content">
-
+		
 		<div class="row row-centered rsvp-margin-15">
+			<div class="col-md-12">
+				<button id="btn5" type="button" class="btn btn-default rsvp-km-btn" onclick="callKnowMore()">Saiba mais</button>
+			</div>
 			<div class="col-md-12">
 				<h:outputLabel id="rsvpLabel" class="rsvp-main-label">
 				</h:outputLabel>
@@ -68,7 +71,7 @@
 		</div>
 		
 		
-		<!-- Modal -->
+		<!-- Modal de loading -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -84,6 +87,54 @@
 
   </div>
 </div>
+
+<!-- Modal de saiba mais -->
+  <div class="modal fade" id="modalmore" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP</h4>
+        </div>
+        <div class="modal-body rsvp-modal-color">
+          <p><strong>RSVP</strong> é a abreviação para Rapid Serial Visual Presentation.</p> 
+          <p>Apresentação visual rápida e em série, consiste em exibir palavras em um ponto fixo com uma sequência rápida.
+          Com isso há o aumento da velocidade de leitura.
+          </p>
+          <p>Para utilizar o <strong>RSVP</strong> é simples:</p>
+          <p>
+          <button id="btn1" type="button" class="btn btn-default rsvp-btn-radius rsvp-btn-explain">
+		   <i class="glyphicon glyphicon-step-backward rsvp-play-icon" />
+		  </button>
+		  <p>Este é o botão reiniciar. Com ele, a Leitura é interrompida e há a volta para o início do texto.</p>
+		  </p>
+		  <p>
+		  <button id="btn2" type="button" class="btn btn-success rsvp-btn-radius rsvp-btn-explain">
+			<i id="change" class="glyphicon glyphicon-play-circle rsvp-play-icon" />
+		  </button>
+		  <p>Este é o botão de play, com ele, é iniciada a leitura e ao estar em movimento, existe a possibilidade de pausar no meio da leitura.</p>
+		  </p>
+		  <p>
+		  <button id="selectedppm" class="btn btn-primary dropdown-toggle btn-height rsvp-btn-radius rsvp-btn-explain" type="button">
+			Selecione a velocidade <span class="caret"></span>
+		  </button>
+		  <p>E por fim, esse é o botão de seleção da velocidade em que as palavras passarão na caixa de texto.</p>
+		  </p>
+		  <p>
+			<h:inputTextarea class="rsvp-text-area rsvp-btn-explain" cols="30" rows="5" disabled="true"/>
+			<p>Esta é a caixa e texto onde deverão ser inseridas as palavras da sua leitura.</p>
+		  </p>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 
 	</ui:define>

@@ -13,6 +13,7 @@ function back(){
 	$("#rsvpLabel").text(listUserText[index]);
 	$('#change').removeClass('glyphicon-pause').addClass('glyphicon-play-circle');
 	clearTimer();
+	isPause = false;
 	}
 }
 
@@ -90,8 +91,9 @@ function defineInterval(time){
 }
 
 function receiveText(){
-	listUserText = getUserText().replace( /\n/g, " ");
-	listUserText = getUserText().replace( "  ", " ").split(" ");
+	listUserText = getUserText().replace("<p>\\s*</p>|<p/>", " ");
+	listUserText = getUserText().replace("  ", " ");
+	listUserText = getUserText().replace("   ", " ").split(" ");
 	$("#rsvpLabel").text(listUserText[0]);
 }
 	
@@ -186,6 +188,10 @@ function setOption5(value){
 
 function getWordsPerMinute(){
 	return wpm;
+}
+
+function callKnowMore() {
+	$('#modalmore').modal();
 }
 
 //Quando carregr a tela, irá inserir os tooltips dos botões
