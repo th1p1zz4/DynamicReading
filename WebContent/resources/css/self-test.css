@@ -1,5 +1,5 @@
 .sf-margin-10 {
-	margin-top: 10%;
+	margin-top: 15%;
 }
 
 .sf-btn-center {
@@ -11,4 +11,14 @@
 
 .sf-center-text {
 	padding: 2% 10% 0% 12%;
+}
+
+.sf-center-text-same-line {
+	padding: 0 0 0 12%;
+}
+
+@media ( max-width : 500px) {
+	.sf-margin-15 {
+    	margin-top: 15%;
+	}
 }
