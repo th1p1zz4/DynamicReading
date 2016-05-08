@@ -11,6 +11,7 @@ function finish(){
 	var result = ((date.getTime() - ms) / 1000);
 	result = (105 / result) * 60;
 	result = parseInt(result);
-	alert("Você tem a média de " + result + " palavras por minuto (ppm)");
+	$("#sfmodal").modal();
+	$("#sflabel").text("Você tem a média de " + result + " palavras por minuto (ppm)");
 	$("#btn-init").removeClass("disabled");
 }
