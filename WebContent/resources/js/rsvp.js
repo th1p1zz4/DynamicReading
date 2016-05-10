@@ -60,24 +60,24 @@ function defineInterval(time){
 		if(listUserText[index].slice(-1) == "." && listUserText[index].slice(-1) != undefined){
 			clearTimer();
 			isPause = false;
-			setTimeout(play, 600);
+			setTimeout(play, 400);
 			//Se a palavra possui uma vírgula, aumenta o delay para ter uma pausa.
 		} else if (listUserText[index].slice(-1) == "," && listUserText[index].slice(-1) != undefined){
 			clearTimer();
 			isPause = false;
-			setTimeout(play, 400);
+			setTimeout(play, 200);
 		} else if(listUserText[index].slice(-1) == "!" && listUserText[index].slice(-1) != undefined){
 			clearTimer();
 			isPause = false;
-			setTimeout(play, 400);
+			setTimeout(play, 200);
 		} else if(listUserText[index].slice(-1) == "?" && listUserText[index].slice(-1) != undefined){
 			clearTimer();
 			isPause = false;
-			setTimeout(play, 400);	
+			setTimeout(play, 200);	
 		} else if(listUserText[index].slice(-1) == ")" && listUserText[index].slice(-1) != undefined){
 			clearTimer();
 			isPause = false;
-			setTimeout(play, 400);	
+			setTimeout(play, 200);	
 		}
 		$("#rsvpLabel").text(listUserText[index]);
 		index++;
@@ -93,7 +93,13 @@ function defineInterval(time){
 function receiveText(){
 	//listUserText = getUserText().replace("  ", " ");
 	//listUserText = getUserText().replace(/\r\n|\r|\n/g," ");
-	listUserText = getUserText().replace(".",". ").replace(/\r\n|\r|\n/g, " ").replace("  ", " ").replace("   ", " ").replace(";", "; ").replace(":", ": ").replace("", " ").split(" ");
+	listUserText = getUserText().replace(/\r\n|\r|\n/g, " ").replace("  ", " ").replace("   ", " ").replace(";", "; ").replace(":", ": ").replace("", " ").replace(".",". ").split(" ");
+	for(var i = 0; i < listUserText.length; i++){
+	   var index = listUserText.indexOf("");
+	if (index > -1) {
+		listUserText.splice(index, 1);
+	}
+	}
 	//listUserText = getUserText().replace("   ", " ").split(" ");
 	$("#rsvpLabel").text(listUserText[0]);
 }
