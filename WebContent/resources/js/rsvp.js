@@ -91,9 +91,10 @@ function defineInterval(time){
 }
 
 function receiveText(){
-	listUserText = getUserText().replace("<p>\\s*</p>|<p/>", " ");
-	listUserText = getUserText().replace("  ", " ");
-	listUserText = getUserText().replace("   ", " ").split(" ");
+	//listUserText = getUserText().replace("  ", " ");
+	//listUserText = getUserText().replace(/\r\n|\r|\n/g," ");
+	listUserText = getUserText().replace(".",". ").replace(/\r\n|\r|\n/g, " ").replace("  ", " ").replace("   ", " ").replace(";", "; ").replace(":", ": ").replace("", " ").split(" ");
+	//listUserText = getUserText().replace("   ", " ").split(" ");
 	$("#rsvpLabel").text(listUserText[0]);
 }
 	

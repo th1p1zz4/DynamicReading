@@ -82,3 +82,9 @@
 .rsvp-modal-color {
 	color: #0F459B;
 }
+
+@media (min-width: 1200px){
+	.container {
+    	 width: 970px !important;
+	}
+}
