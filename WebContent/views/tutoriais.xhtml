@@ -6,37 +6,44 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
+<h:outputScript name="js/tutoriais.js" />
+<h:outputStylesheet name="css/tutoriais.css" />
+
 	<ui:composition template="/templates/default/main.xhtml">
 		<ui:define name="content">
-		
-		<div class="container-fluid">
-			<div class="row row-space">
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 1" />
+			<div class="container tt-margin-top-10">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-info tt-div">
+					<div class="panel-heading">
+							<h3 class="panel-title text-center">Fácil</h3>
+						</div>
+						<div class="panel-body text-center">
+						</div>
+					</div>
 				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 2" />
+			
+				<div class="col-md-4">
+					<div class="panel panel-success tt-div">
+					<div class="panel-heading">
+							<h3 class="panel-title text-center">Médio</h3>
+						</div>
+						<div class="panel-body text-center">
+						</div>
+					</div>
 				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 3" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 4" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 5" />
-				</div>
-				<div class="col-md-2 col-xs-4">
-					<h:commandButton class="btn big-button"
-						action="#{studentMB.updateStudent()}" value="Exercício 6" />
-				</div>
+				<div class="col-md-4">
+					<div class="panel panel-danger tt-div">
+					<div class="panel-heading">
+							<h3 class="panel-title text-center">Difícil</h3>
+						</div>
+						<div class="panel-body text-center">
+						</div>
+					</div>
 			</div>
-		</div>
+			</div>
+			</div>
+			
 		</ui:define>
 	</ui:composition>
 

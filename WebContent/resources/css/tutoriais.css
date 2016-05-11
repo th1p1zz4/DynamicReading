@@ -1,0 +1,13 @@
+.tt-margin-top-10 {
+	margin-top: 10%;
+}
+
+div.tt-div{
+  transition: 0.2s ease-in-out;
+}
+div.tt-div:hover {
+  -webkit-transform: scale(1.1);
+  cursor: pointer;
+  opacity: 0.6;
+}
+
