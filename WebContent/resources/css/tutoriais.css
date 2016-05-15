@@ -11,3 +11,23 @@ div.tt-div:hover {
   opacity: 0.6;
 }
 
+.tutorial-icon-red {
+	font-size: 50px;
+	color: #a94442; 
+}
+
+.tutorial-icon-yellow {
+	font-size: 50px;
+	color: orange;
+}
+
+.tutorial-icon-green {
+	font-size: 50px;
+	color: #3c763d;
+}
+
+@media ( max-width : 750px) {
+	.tt-margin-top-10 {
+    	margin-top: 25%;
+	}
+}

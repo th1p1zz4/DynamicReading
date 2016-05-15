@@ -27,24 +27,7 @@
 							<p>
 								<button id="btn-init" class="btn btn-success sf-btn-center" onclick="init()">INICIAR</button>
 							</p>
-							<p class="sf-center-text">
-								<strong>Filme de Terror.</strong>
-							</p>
-							<p class="sf-center-text">Hoje as pessoas são mais vazias,
-								mais fúteis, mais tristes, mais cinzas.</p>
-							<p class="sf-center-text">Esse mundo "moderno" que tanto
-								almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p>
-							<p class="sf-center-text">Nada surpreende por muito tempo.
-								Corre-se muito, e nem se sabe pra quê.</p>
-							<p class="sf-center-text">As pessoas vivem buscando coisas
-								novas, para saciar o vácuo imenso que existe nelas.</p>
-							<p class="sf-center-text">As tragédias não comovem, os
-								relacionamentos viraram status.</p>
-							<p class="sf-center-text">No fim, o que existe são pessoas se
-								anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade
-								grotesca.</p>
-							<p class="sf-center-text">Isso me lembra um filme de terror
-								onde os corpos estão ali, mas não existem entranhas.</p>
+							<div id="inner"></div>
 							<p>
 								<button class="btn btn-danger sf-btn-center" onclick="finish()">ENCERRAR</button>
 							</p>
@@ -70,15 +53,89 @@
 				</h:outputLabel>
           </div>
           <div class="modal-footer">
+            <a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}" type="button" class="btn btn-default" data-dismiss="modal"></a>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+			<!-- Modal easy -->
+<div id="easymodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">REULTADO</h4>
+          <div class="modal-body">
+          	<h:outputLabel id="sflabel">
+				</h:outputLabel>
+			Mamão com açúcar seu lixo, mto easy
+          </div>
+          <div class="modal-footer">
            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
        </div>
       </div>
     </div>
+  </div>
+</div>
 
+			<!-- Modal medium -->
+<div id="mediummodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">REULTADO</h4>
+          <div class="modal-body">
+          	<h:outputLabel id="sflabel">
+				</h:outputLabel>
+			Warning, esse daqui é mais ou menos, e mesmo asism é tenso, se liga.
+          </div>
+          <div class="modal-footer">
+          <a href="#{headerMB.urlView() ? 'rsvp.xhtml' : 'views/rsvp.xhtml'}" ><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></a>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+			<!-- Modal hard -->
+<div id="hardmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">HARD</h4>
+          <div class="modal-body">
+          	<h:outputLabel id="sflabel">
+				</h:outputLabel>
+				Você é doido? Nesse nível vc tem que tá o bichão pá pode continua.
+          </div>
+          <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+       </div>
+      </div>
+    </div>
   </div>
 </div>
 	</ui:define>
 </ui:composition>
+
+<h:outputStylesheet name="css/self-test.css" />
+<h:outputScript name="js/self-test.js" />
 
 </html>

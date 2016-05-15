@@ -207,6 +207,6 @@ window.onload = function(){
 //	$('#btn1').tooltip({title: "Volta para a primeira palavra", trigger: "hover", placement: "bottom"});
 //	$('#btn2').tooltip({title: "Inicia a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
 //	$('#btn3').tooltip({title: "Para a leitura dinâmica", trigger: "hover", placement: "bottom"}); 
-	$('#selectedppm').tooltip({title: "Selecione a quantidade de palavras que passarão por minuto", trigger: "hover", placement: "bottom"}); 
+	$('#selectedppm').tooltip({title: "Selecione a quantidade de palavras que passarão por minuto", trigger: "hover", placement: "top"}); 
 }
 

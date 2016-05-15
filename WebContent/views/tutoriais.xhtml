@@ -5,42 +5,52 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
-
-<h:outputScript name="js/tutoriais.js" />
+	
+	<h:outputScript name="js/tutoriais.js" />
 <h:outputStylesheet name="css/tutoriais.css" />
-
+	
 	<ui:composition template="/templates/default/main.xhtml">
 		<ui:define name="content">
 			<div class="container tt-margin-top-10">
 			<div class="row">
+				<a href="#{headerMB.urlView() ? 'self-test.xhtml' : 'views/self-test.xhtml'}" onclick="callEasyTutorial()">
 				<div class="col-md-4">
-					<div class="panel panel-info tt-div">
+					<div class="panel panel-success tt-div">
 					<div class="panel-heading">
 							<h3 class="panel-title text-center">Fácil</h3>
 						</div>
 						<div class="panel-body text-center">
+						<i class="glyphicon glyphicon-hourglass tutorial-icon-green"></i>
 						</div>
 					</div>
 				</div>
-			
+				</a>
+				
+				<a href="#{headerMB.urlView() ? 'self-test.xhtml' : 'views/self-test.xhtml'}" onclick="callMediumTutorial()">
 				<div class="col-md-4">
-					<div class="panel panel-success tt-div">
+					<div class="panel panel-warning tt-div">
 					<div class="panel-heading">
 							<h3 class="panel-title text-center">Médio</h3>
 						</div>
 						<div class="panel-body text-center">
+						<i class="glyphicon glyphicon-bell tutorial-icon-yellow"></i>
 						</div>
 					</div>
 				</div>
+				</a>
+				
+				<a href="#{headerMB.urlView() ? 'self-test.xhtml' : 'views/self-test.xhtml'}" onclick="callHardTutorial()">
 				<div class="col-md-4">
 					<div class="panel panel-danger tt-div">
 					<div class="panel-heading">
 							<h3 class="panel-title text-center">Difícil</h3>
 						</div>
 						<div class="panel-body text-center">
+						<i class="glyphicon glyphicon-alert tutorial-icon-red"></i>
 						</div>
 					</div>
-			</div>
+				</div>
+				</a>
 			</div>
 			</div>
 			
