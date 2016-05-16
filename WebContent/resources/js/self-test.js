@@ -15,17 +15,14 @@ function finish(){
 	result = parseInt(result);
 	
 	if(sessionStorage.getItem("type") == "easy"){
-		$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
 		$("#sfmodaleasy").modal();
 		$("#sflabeleasy").text("Você tem a média de " + result + " palavras por minuto (ppm)");
 	}
 	if(sessionStorage.getItem("type") == "medium"){
-		$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
 		$("#sfmodalmedium").modal();
 		$("#sflabelmedium").text("Você tem a média de " + result + " palavras por minuto (ppm)");
 	}
 	if(sessionStorage.getItem("type") == "hard"){
-		$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
 		$("#sfmodalhard").modal();
 		$("#sflabelhard").text("Você tem a média de " + result + " palavras por minuto (ppm)");
 	} else {
@@ -53,14 +50,17 @@ $(document).ready(function()
 	if(sessionStorage.getItem("type") != undefined){
 		if(sessionStorage.getItem("type") == "easy"){
 			easyModal();
-			$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
+			$( "#inner" ).empty();
+			$( "#inner" ).append( "<p class='sf-center-text'> SÓ VAI CARAIO</p>");
 		}
 		if(sessionStorage.getItem("type") == "medium"){
 			mediumModal();
+			$( "#inner" ).empty();
 			$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
 		}
 		if(sessionStorage.getItem("type") == "hard"){
 			hardModal();
+			$( "#inner" ).empty();
 			$( "#inner" ).append( "<p class='sf-center-text'><strong>Filme de Terror.</strong></p><p class='sf-center-text'>Hoje as pessoas são mais vazias, mais fúteis, mais tristes, mais cinzas.</p><p class='sf-center-text'>Esse mundo 'moderno' que tanto almejamos, no fim, não é tão bom quanto parecia. Tudo é banal.</p><p class='sf-center-text'>Nada surpreende por muito tempo. Corre-se muito, e nem se sabe pra quê.</p> <p class='sf-center-text'>As pessoas vivem buscando coisas	novas, para saciar o vácuo imenso que existe nelas.</p> <p class='sf-center-text'>As tragédias não comovem, os relacionamentos viraram status.</p> <p class='sf-center-text'>No fim, o que existe são pessoas se anestesiando com tarjas pretas, drogas, comida, sexo, compras para fugir dessa realidade grotesca.</p><p class='sf-center-text'>Isso me lembra um filme de terror onde os corpos estão ali, mas não existem entranhas.</p>" );
 		}
 	}
