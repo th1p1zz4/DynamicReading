@@ -47,7 +47,7 @@ function hardModal(){
 
 $(document).ready(function()
 {
-	if(sessionStorage.getItem("type") != undefined){
+	if(sessionStorage.getItem("type") != undefined && sessionStorage.getItem("type") != null){
 		if(sessionStorage.getItem("type") == "easy"){
 			easyModal();
 			$( "#inner" ).empty();

@@ -84,6 +84,17 @@ function defineInterval(time){
 		if(listUserText.length == index){
 			clearTimer();
 			$('#change').removeClass('glyphicon-pause').addClass('glyphicon-play-circle');
+			if(sessionStorage.getItem("type") != undefined && sessionStorage.getItem("type") != null){
+				if(sessionStorage.getItem("type") == "easy"){
+					easyModalFim();
+				}
+				if(sessionStorage.getItem("type") == "medium"){
+					mediumModalFim();
+				}
+				if(sessionStorage.getItem("type") == "hard"){
+					hardModalFim();
+				} 
+			}
 		}
 	
 },time);
@@ -201,6 +212,50 @@ function callKnowMore() {
 	$('#modalmore').modal();
 }
 
+function easyModal() {
+	$('#rsvpeasymodal').modal();
+}
+
+function mediumModal() {
+	$('#rsvpmediummodal').modal();
+}
+
+function hardModal() {
+	$('#rsvphardmodal').modal();
+}
+
+function easyModalFim() {
+	$('#rsvpeasymodalfim').modal();
+}
+
+function mediumModalFim() {
+	$('#rsvpmediummodalfim').modal();
+}
+
+function hardModalFim() {
+	$('#rsvphardmodalfim').modal();
+}
+
+function callRsvp(){
+	if(sessionStorage.getItem("type") == "easy"){
+		setOption1(250);
+	} else if (sessionStorage.getItem("type") == "medium"){
+		setOption2(400);
+	} else if (sessionStorage.getItem("type") == "hard"){
+		setOption2(600);
+	}
+}
+
+function goToFim(){
+	if(sessionStorage.getItem("type") == "easy"){
+		//TODO
+	} else if (sessionStorage.getItem("type") == "medium"){
+		//TODO
+	} else if (sessionStorage.getItem("type") == "hard"){
+		//TODO
+	}
+}
+
 //Quando carregr a tela, irá inserir os tooltips dos botões
 
 window.onload = function(){
@@ -210,3 +265,21 @@ window.onload = function(){
 	$('#selectedppm').tooltip({title: "Selecione a quantidade de palavras que passarão por minuto", trigger: "hover", placement: "top"}); 
 }
 
+$(document).ready(function()
+		{
+			if(sessionStorage.getItem("type") != undefined && sessionStorage.getItem("type") != null){
+				if(sessionStorage.getItem("type") == "easy"){
+					easyModal();
+					setUserText("E AE BIXAO, VAMO VE SE FOI LA PRO TEXT AREA RAPA");
+				}
+				if(sessionStorage.getItem("type") == "medium"){
+					mediumModal();
+					setUserText("E AE BIXAO, VAMO VE SE FOI LA PRO TEXT AREA RAPA");
+				}
+				if(sessionStorage.getItem("type") == "hard"){
+					hardModal();
+					setUserText("E AE BIXAO, VAMO VE SE FOI LA PRO TEXT AREA RAPA");
+				} 
+			}
+			
+})
