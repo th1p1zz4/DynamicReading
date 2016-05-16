@@ -51,7 +51,7 @@ $(document).ready(function()
 		if(sessionStorage.getItem("type") == "easy"){
 			easyModal();
 			$( "#inner" ).empty();
-			$( "#inner" ).append( "<p class='sf-center-text'> SÓ VAI CARAIO</p>");
+			$( "#inner" ).append( "<p class='sf-center-text'> Teste</p>");
 		}
 		if(sessionStorage.getItem("type") == "medium"){
 			mediumModal();
