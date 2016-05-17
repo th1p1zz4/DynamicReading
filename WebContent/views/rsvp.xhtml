@@ -5,7 +5,7 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
-
+	
 <ui:composition template="/templates/default/main.xhtml">
 	<ui:define name="content">
 		
@@ -65,7 +65,7 @@
 				<h:outputLabel class="rsvp-label-text">Escreva seu texto aqui:</h:outputLabel>
 			</div>
 			<div class="col-md-12">
-				<h:inputTextarea class="rsvp-text-area" cols="40" rows="5"
+				<h:inputTextarea id="input-ta" class="rsvp-text-area" cols="40" rows="5"
 					onkeyup="setUserText(this.value);" />
 			</div>
 		</div>
@@ -149,6 +149,8 @@
           <div class="modal-body">
 			<p>Esta é a segunda parte do tutorial nível fácil.</p>
 			<p>Escolhemos outro texto para que você leia a uma velocidade de 250 ppm (palavras por minuto)</p>
+			<p>O título deste interessantíssimo texto é: </p>
+			<p><strong>A origem do aperto de mãos</strong></p>
 			<p>Com a técnica RSVP você poderá ler focando em apenas um ponto. Clique em iniciar quando estiver pronto!</p>
 			<p>Concentre-se e boa sorte!</p>
           </div>
@@ -284,5 +286,8 @@
 
 	</ui:define>
 </ui:composition>
+
+<h:outputStylesheet name="css/rsvp.css" />
+	<h:outputScript name="js/rsvp.js" />
 
 </html>

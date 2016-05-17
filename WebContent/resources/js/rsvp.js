@@ -267,8 +267,10 @@ window.onload = function(){
 
 $(document).ready(function()
 		{
+				$("#input-ta").prop("disabled", false);
 			if(sessionStorage.getItem("type") != undefined && sessionStorage.getItem("type") != null){
 				if(sessionStorage.getItem("type") == "easy"){
+					$("#input-ta").prop("disabled", true);
 					easyModal();
 					setUserText(
 "O aperto de mãos é um cumprimento, além de ser uma forma de firmar um acordo verbal, e é usado diariamente por milhares e milhares de pessoas, quase sem perceber, já que virou algo tão comum. Dependendo da cultura em que se encaixa, o aperto de mão simboliza um gesto social de confiança, afinidade, amizade, entre outras coisas. Aqui no Brasil, pode ser qualquer uma dessas coisas, mas é, principalmente, uma forma de firmar acordos verbais e de cumprimentar. "+
@@ -289,6 +291,7 @@ $(document).ready(function()
 );
 				}
 				if(sessionStorage.getItem("type") == "medium"){
+					$("#input-ta").prop("disabled", true);
 					mediumModal();
 					setUserText("Tradicionalmente, o que se convencionou chamar de sucesso é medido pelo fato de ter casa própria e carro. Mas isso já não é mais assim. A cada dia, aumenta o número de jovens que optam em não adquirir este tipo de bens. " +
 "Diversos estudos especializados mostraram que cada vez menos pessoas da chamada 'geração Y' (que hoje têm cerca de 30 a 35 anos) compram casa. Sem falar no número ainda menor de interessados em adquirir um automóvel. Na realidade, eles não fazem quase nenhum tipo de gasto grande, sem contar os iPhones, é claro. " +
@@ -307,6 +310,7 @@ $(document).ready(function()
 "O importante é que as experiências não se desvalorizam e não podem ser roubadas.");
 				}
 				if(sessionStorage.getItem("type") == "hard"){
+					$("#input-ta").prop("disabled", true);
 					hardModal();
 					setUserText(
 "Imagine dois pontinhos. Agora, que você está acordado, eles vão ser só dois pontinhos mesmo. Mas no sono profundo é diferente. Se uma parte do cérebro imagina isso, outra área fica inspirada e cria um par de olhos. Mais outra pega e coloca esses olhos numa face. Se o rosto sair feio, a área mais burra da mente se assusta. E solta um comando mandando você correr. Começa o enredo de um sonho. Louco, mas a realidade não é muito mais sã. Pense em alguma coisa estúpida. 'Martelo', por exemplo. Não existe nenhum lugar na sua cabeça com a definição da palavra 'martelo'. Tudo o que há é um mosaico de referências: a dor no dedo depois de uma martelada infeliz, a imagem da caixa de ferramentas do seu avô... Elas só se juntam de vez em quando para formar uma ideia sólida, igual acontece com os tijolos mentais que constroem os sonhos. A realidade e o sonhar, na verdade, se completam. E a ciência está descobrindo que uma não existe sem a outra. Vire a página para saber o que os sonhos realmente são. Isso se você não estiver sonhando neste momento. " + 
