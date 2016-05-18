@@ -248,7 +248,14 @@ function callRsvp(){
 
 function goToFim(){
 	if(sessionStorage.getItem("type") == "easy"){
-		//TODO
+		sessionStorage.setItem("e1", $('#e1').prop('checked'));
+		sessionStorage.setItem("e2", $('#e2').prop('checked'));
+		sessionStorage.setItem("e3", $('#e3').prop('checked'));
+		sessionStorage.setItem("e4", $('#e4').prop('checked'));
+		sessionStorage.setItem("e5", $('#e5').prop('checked'));
+		sessionStorage.setItem("e6", $('#e6').prop('checked'));
+		sessionStorage.setItem("e7", $('#e7').prop('checked'));
+		sessionStorage.setItem("e8", $('#e8').prop('checked'));
 	} else if (sessionStorage.getItem("type") == "medium"){
 		//TODO
 	} else if (sessionStorage.getItem("type") == "hard"){
