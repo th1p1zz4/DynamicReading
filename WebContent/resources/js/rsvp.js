@@ -248,18 +248,92 @@ function callRsvp(){
 
 function goToFim(){
 	if(sessionStorage.getItem("type") == "easy"){
-		sessionStorage.setItem("e1", $('#e1').prop('checked'));
-		sessionStorage.setItem("e2", $('#e2').prop('checked'));
-		sessionStorage.setItem("e3", $('#e3').prop('checked'));
-		sessionStorage.setItem("e4", $('#e4').prop('checked'));
-		sessionStorage.setItem("e5", $('#e5').prop('checked'));
-		sessionStorage.setItem("e6", $('#e6').prop('checked'));
-		sessionStorage.setItem("e7", $('#e7').prop('checked'));
-		sessionStorage.setItem("e8", $('#e8').prop('checked'));
+		 var listaRespostaTextoUm = [];
+		 var listaRespostaTextoDois = [];
+		 if($('#e1').prop('checked') == true){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#e2').prop('checked') == false){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#e3').prop('checked') == false){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#e4').prop('checked') == true){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#e5').prop('checked') == true){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#e6').prop('checked') == true){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#e7').prop('checked') == false){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#e8').prop('checked') == false){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
+		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
 	} else if (sessionStorage.getItem("type") == "medium"){
-		//TODO
+		 var listaRespostaTextoUm = [];
+		 var listaRespostaTextoDois = [];
+		 if($('#m1').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#m2').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#m3').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#m4').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#m5').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#m6').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#m7').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#m8').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
+		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
 	} else if (sessionStorage.getItem("type") == "hard"){
-		//TODO
+		 var listaRespostaTextoUm = [];
+		 var listaRespostaTextoDois = [];
+		 if($('#h1').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#h2').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#h3').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#h4').prop('checked')){
+			 listaRespostaTextoUm.push(1);
+		 }
+		 if($('#h5').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#h6').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#h7').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 if($('#h8').prop('checked')){
+			 listaRespostaTextoDois.push(1);
+		 }
+		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
+		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
 	}
 }
 

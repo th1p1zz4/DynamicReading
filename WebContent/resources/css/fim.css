@@ -1,0 +1,9 @@
+.fim-margin-10 {
+	margin-top: 10%;
+}
+
+@media ( max-width : 750px) {
+	.fim-margin-15 {
+    	margin-top: 15%;
+	}
+}
