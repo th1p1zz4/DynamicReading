@@ -7,3 +7,10 @@
 .contato-margin {
 	margin: 10% 0 0% 33%;
 }
+
+
+@media ( max-width : 400px) {
+	.get-down {
+		margin-top: 15%;
+	}
+}
