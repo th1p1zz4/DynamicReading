@@ -248,92 +248,92 @@ function callRsvp(){
 
 function goToFim(){
 	if(sessionStorage.getItem("type") == "easy"){
-		 var listaRespostaTextoUm = [];
-		 var listaRespostaTextoDois = [];
+		 var respostaTextoUm;
+		 var respostaTextoDois;
 		 if($('#e1').prop('checked') == true){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#e2').prop('checked') == false){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#e3').prop('checked') == false){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#e4').prop('checked') == true){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#e5').prop('checked') == true){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#e6').prop('checked') == true){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#e7').prop('checked') == false){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#e8').prop('checked') == false){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
-		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
-		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
+		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
+		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
 	} else if (sessionStorage.getItem("type") == "medium"){
-		 var listaRespostaTextoUm = [];
-		 var listaRespostaTextoDois = [];
+		var respostaTextoUm;
+		 var respostaTextoDois;
 		 if($('#m1').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#m2').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#m3').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#m4').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#m5').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#m6').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#m7').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#m8').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
-		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
-		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
+		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
+		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
 	} else if (sessionStorage.getItem("type") == "hard"){
-		 var listaRespostaTextoUm = [];
-		 var listaRespostaTextoDois = [];
+		var respostaTextoUm;
+		 var respostaTextoDois;
 		 if($('#h1').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#h2').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#h3').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#h4').prop('checked')){
-			 listaRespostaTextoUm.push(1);
+			 respostaTextoUm = respostaTextoUm + 1;
 		 }
 		 if($('#h5').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#h6').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#h7').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
 		 if($('#h8').prop('checked')){
-			 listaRespostaTextoDois.push(1);
+			 respostaTextoDois = respostaTextoDois + 1;
 		 }
-		 sessionStorage.setItem("listaRespostaTextoUm", listaRespostaTextoUm.length);
-		 sessionStorage.setItem("listaRespostaTextoDois", listaRespostaTextoDois.length);
+		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
+		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
 	}
 }
 

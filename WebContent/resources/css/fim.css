@@ -1,9 +1,22 @@
-.fim-margin-10 {
+.fim-margin {
 	margin-top: 10%;
 }
 
 @media ( max-width : 750px) {
-	.fim-margin-15 {
-    	margin-top: 15%;
+	.fim-margin {
+    	margin-top: 15% !important;
 	}
+}
+
+@media ( max-width : 400px) {
+	.fim-margin {
+    	margin-top: 25% !important;
+	}
+}
+
+.fim-icon {
+	text-align: center;
+	display: block;
+	font-size: 100px;
+	color: #0F7ED7;
 }
