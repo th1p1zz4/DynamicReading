@@ -25,6 +25,19 @@ function play(){
 			$('#change').removeClass('glyphicon-play-circle').addClass('glyphicon-pause');
 			//recebe as palavras por minuto que o usuário selecionou
 			var wordPer = getWordsPerMinute() ? getWordsPerMinute() : 250;
+			//Caso tenha dado play, altere para a velocidade padrão que é 250 ppm e muda na tela
+			if(!getWordsPerMinute()){
+				var activeClass = $('#selectedppm').attr('class');
+				for(var i = 0; i <= listBtnClass.length; i++){
+					if(activeClass.indexOf(listBtnClass[i]) != -1){
+						activeClass = listBtnClass[i];
+						break;
+					}
+				}	
+				$("#selectedppm").removeClass(activeClass).addClass('btn-info');
+				$("#selectedppm").text("250 palavras por minuto");
+			}
+			
 			//cálcula o tempo de palavras por minuto e transforma para segundos para passar as palavras por segundo.
 			var time = 1000 * (1 / (wordPer / 60));
 			//Seta do ínico o índice da lista para pegar a partir da primeira palavras
