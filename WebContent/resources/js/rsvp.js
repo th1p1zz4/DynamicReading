@@ -261,89 +261,89 @@ function callRsvp(){
 
 function goToFim(){
 	if(sessionStorage.getItem("type") == "easy"){
-		 var respostaTextoUm;
-		 var respostaTextoDois;
+		var respostaTextoUm = 0;
+		 var respostaTextoDois = 0;
 		 if($('#e1').prop('checked') == true){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#e2').prop('checked') == false){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#e3').prop('checked') == false){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#e4').prop('checked') == true){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#e5').prop('checked') == true){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#e6').prop('checked') == true){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#e7').prop('checked') == false){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#e8').prop('checked') == false){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
 		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
 	} else if (sessionStorage.getItem("type") == "medium"){
-		var respostaTextoUm;
-		 var respostaTextoDois;
+		var respostaTextoUm = 0;
+		 var respostaTextoDois = 0;
 		 if($('#m1').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#m2').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#m3').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#m4').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#m5').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#m6').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#m7').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#m8').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
 		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
 	} else if (sessionStorage.getItem("type") == "hard"){
-		var respostaTextoUm;
-		 var respostaTextoDois;
+		 var respostaTextoUm = 0;
+		 var respostaTextoDois = 0;
 		 if($('#h1').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#h2').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#h3').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#h4').prop('checked')){
-			 respostaTextoUm = respostaTextoUm + 1;
+			 respostaTextoUm++;
 		 }
 		 if($('#h5').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#h6').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#h7').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 if($('#h8').prop('checked')){
-			 respostaTextoDois = respostaTextoDois + 1;
+			 respostaTextoDois++;
 		 }
 		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
 		 sessionStorage.setItem("respostaTextoDois", respostaTextoDois);
