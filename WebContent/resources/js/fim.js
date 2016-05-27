@@ -24,7 +24,7 @@ function respostasCertas(qtd) {
 				"<br>" +
 				"<p class='sf-center-text'><strong>Seu resultado!</strong></p> "+ 
 				  "<p>Acertou menos com o RSVP!</p>" +
-				  "<p>Foi falta de concentração? Velocidade muito rápida? Tente com uma velocidade menor, mas não desista. Otimizar sua leitura é fundamental! Não desista.</p>" 
+				  "<p>Foi falta de concentração? Velocidade muito rápida? Tente com uma velocidade menor, mas não desista. Otimizar sua leitura é fundamental!</p>" 
 		 );
 	}
 }
