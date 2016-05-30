@@ -255,7 +255,7 @@ function callRsvp(){
 	} else if (sessionStorage.getItem("type") == "medium"){
 		setOption2(400);
 	} else if (sessionStorage.getItem("type") == "hard"){
-		setOption2(600);
+		setOption4(600);
 	}
 }
 
@@ -292,28 +292,28 @@ function goToFim(){
 	} else if (sessionStorage.getItem("type") == "medium"){
 		var respostaTextoUm = 0;
 		 var respostaTextoDois = 0;
-		 if($('#m1').prop('checked')){
+		 if($('#m1').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#m2').prop('checked')){
+		 if($('#m2').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#m3').prop('checked')){
+		 if($('#m3').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#m4').prop('checked')){
+		 if($('#m4').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#m5').prop('checked')){
+		 if($('#m5').prop('checked') == false){
 			 respostaTextoDois++;
 		 }
-		 if($('#m6').prop('checked')){
+		 if($('#m6').prop('checked') == false){
 			 respostaTextoDois++;
 		 }
-		 if($('#m7').prop('checked')){
+		 if($('#m7').prop('checked') == true){
 			 respostaTextoDois++;
 		 }
-		 if($('#m8').prop('checked')){
+		 if($('#m8').prop('checked') == false){
 			 respostaTextoDois++;
 		 }
 		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);
@@ -321,28 +321,28 @@ function goToFim(){
 	} else if (sessionStorage.getItem("type") == "hard"){
 		 var respostaTextoUm = 0;
 		 var respostaTextoDois = 0;
-		 if($('#h1').prop('checked')){
+		 if($('#h1').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#h2').prop('checked')){
+		 if($('#h2').prop('checked') == false){
 			 respostaTextoUm++;
 		 }
-		 if($('#h3').prop('checked')){
+		 if($('#h3').prop('checked') == true){
 			 respostaTextoUm++;
 		 }
-		 if($('#h4').prop('checked')){
+		 if($('#h4').prop('checked') == false){
 			 respostaTextoUm++;
 		 }
-		 if($('#h5').prop('checked')){
+		 if($('#h5').prop('checked') == false){
 			 respostaTextoDois++;
 		 }
-		 if($('#h6').prop('checked')){
+		 if($('#h6').prop('checked') == true){
 			 respostaTextoDois++;
 		 }
-		 if($('#h7').prop('checked')){
+		 if($('#h7').prop('checked') == false){
 			 respostaTextoDois++;
 		 }
-		 if($('#h8').prop('checked')){
+		 if($('#h8').prop('checked') == true){
 			 respostaTextoDois++;
 		 }
 		 sessionStorage.setItem("respostaTextoUm", respostaTextoUm);

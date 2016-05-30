@@ -6,7 +6,7 @@ function respostasCertas(qtd) {
 				"<br>" +
 				"<p class='sf-center-text'><strong>Seu resultado</strong></p> "+ 
 				"<p>Acertou MAIS com o RSVP!</p>" +
-				"<p>Leitura cotidiana ou leitura para estudos, não importa o motivo, utilize o RSVP para acelerar e aumentar a quantidade de textos lidos, pois a compreensão foi maior que na leitura convencional. Tente velocidade mais altas e nunca pare!</p>" 
+				"<p>Leitura cotidiana ou leitura para estudos, não importa o motivo, utilize o RSVP para acelerar e aumentar a quantidade de textos lidos, pois a compreensão foi maior que na leitura convencional. Tente velocidades mais altas e nunca pare!</p>" 
 		 );
 	} else if(qtd == 2){
 		$( "#jumbotron" ).append( "<div class='row'>" +
